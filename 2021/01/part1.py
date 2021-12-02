@@ -1,11 +1,11 @@
 file = open("input.txt", "r")
 
-prev = 9999999999999 
+prev = None
 increase_count = 0
 
 for line in file:
     curr = int(line)
-    if prev < curr:
+    if prev is not None and prev < curr:
         increase_count += 1
 
     prev = curr
